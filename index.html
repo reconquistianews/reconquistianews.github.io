@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Article Submission</h1>
+        <button id="loginBtn">Login</button>
+    </header>
+
+    <main>
+        <!-- Article submission form -->
+        <div id="articleForm" style="display: none;">
+            <h2>Submit an Article</h2>
+            <form id="submitForm" enctype="multipart/form-data">
+                <label for="headline">Headline:</label>
+                <input type="text" id="headline" name="headline" required><br>
+                
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br>
+                
+                <label for="content">Article:</label><br>
+                <textarea id="content" name="content" rows="4" required></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Display submitted articles -->
+        <div id="articles">
+            <!-- Articles will be displayed here -->
+        </div>
+    </main>
+
+    <!-- Login modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
